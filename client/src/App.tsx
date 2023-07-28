@@ -138,12 +138,12 @@ const App: React.FC = () => {
   const filteredCards = cards.filter(card => card.Name.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
-    <div>
+    <div className="app">
       <input type="search" placeholder="Search" onChange={handleSearch} />
+      <NewCardForm onCreate={handleCreate} />
       {filteredCards.map(card => (
         <Card key={card.ID} card={card} onEdit={handleEdit} onDelete={handleDelete} />
       ))}
-      <NewCardForm onCreate={handleCreate} />
     </div>
   );
 };

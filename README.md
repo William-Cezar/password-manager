@@ -56,9 +56,6 @@ This project is composed of two parts: a React frontend and a Go backend. To get
 
 * **William Cezar** 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Algorithm & Approach
 
@@ -96,3 +93,38 @@ The code follows best practices such as:
 - CORS middleware: To bypass the CORS policy in the browser
 
 The code is written using Visual Studio Code and can be executed using standard tools for each language (go run for Go and npm start for React).
+
+# Test Plan
+
+## Unit Tests
+
+Unit tests are used to test individual components or functions in isolation. For this React application, you could use Jest, a popular JavaScript testing framework, together with a library such as React Testing Library to render your components in a test environment.
+
+1. **NewCardForm Component**: Test whether the form handles input changes correctly and whether the form submission calls the correct function with the right arguments.
+2. **Card Component**: Test whether it renders the card data correctly, handles the password visibility toggle correctly, and calls the correct functions when the Edit and Delete buttons are clicked.
+3. **App Component**: Test the search functionality, as well as the creation, deletion, and editing of cards. Make sure that the cards are filtered and rendered correctly.
+
+## Integration Tests
+
+Integration tests are used to test how different parts of your application work together. For this application, you could focus on user flows like creating a new card, editing a card, deleting a card, and searching for a card.
+
+1. **New Card Flow**: Test what happens when a user fills out the NewCardForm and submits it.
+2. **Edit Card Flow**: Test what happens when a user edits an existing card and saves it.
+3. **Delete Card Flow**: Test what happens when a user deletes an existing card.
+4. **Search Flow**: Test what happens when a user types into the search input field.
+
+## End-to-End Tests
+
+End-to-End tests are used to test your application in a way that a user would use it, from beginning to end. For this, you could use a tool like Cypress.
+
+1. **Complete User Flow**: Test the entire user flow from the user arriving at the page, creating a new card, editing it, searching for it, and deleting it.
+
+For each test case, you should have expected results and compare them to the actual results. If they don't match, the test should fail.
+
+## Quality Assurance Tests
+
+Quality assurance testing is a high-level type of testing to ensure the application meets specified requirements and that users will be satisfied with it.
+
+1. **Usability Testing**: This involves testing the user interface and overall user experience of the application. This could involve testers who haven’t been involved in the development of the product to ensure an unbiased review.
+2. **Performance Testing**: This involves testing how well the application performs under a particular workload, especially in terms of responsiveness and stability. For a small application like this, it might not be as necessary, but it's something to keep in mind for larger applications.
+3. **Security Testing**: This involves testing the application for any security vulnerabilities. Given that the application deals with passwords, ensuring that the data is handled securely would be vital.

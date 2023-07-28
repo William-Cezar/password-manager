@@ -4,16 +4,9 @@
   align-items: center;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow-y: auto;
-  margin-top: 1rem;
-}
-
 .card {
-  flex-basis: calc(33% - 1rem);
+  width: 300px;
+  height: 200px;
   margin: 0.5rem;
   padding: 1rem;
   border: 1px solid #ccc;
